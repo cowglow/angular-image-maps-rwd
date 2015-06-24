@@ -36,8 +36,8 @@ angular.module('rwdImageMaps',[])
 								h = temp.height;
 						}
 						
-						var wPercent = $(element).width()/100,
-							hPercent = $(element).height()/100,
+						var wPercent = ($(element).width()==0 ? w:$(element).width())/100,
+							hPercent = ($(element).height()==0 ? h:$(element).height())/100,
 							map = attrs.usemap.replace('#', ''),
 							c = 'coords';
 						
